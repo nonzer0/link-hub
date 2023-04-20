@@ -1,29 +1,13 @@
 import Image from 'next/image'
-import useSupabase from '@/hooks/supabase'
-import { useSessionQuery } from "@/hooks/use-session-query";
-import Auth from '@/components/Auth';
 import ProtectedWrapper from '@/components/ProtectedWrapper';
 import { NavBar } from '@/components'
 
 export default function Home() {
-  // const client = useSupabase();
 
-  // const { data: session, isLoading, isError } = useSessionQuery();
-
-  // if (isLoading) {
-  //   return <div>Loading...</div>;
-  // }
-
-  // if (isError) {
-  //   return <div>Error</div>;
-  // }
   return (
     <ProtectedWrapper>
 
     <div>
-      {/* {!session ? (
-        <Auth />
-      ) : ( */}
         <div>
           <NavBar />
           <main className="flex min-h-screen flex-col items-center justify-between p-24">
@@ -47,7 +31,6 @@ export default function Home() {
           </main>
         </div>
       )
-      {/* } */}
     </div>
     </ProtectedWrapper>
   )
